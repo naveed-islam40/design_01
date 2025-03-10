@@ -13,7 +13,7 @@ interface ImageItem {
 
 interface SliderProps {
   images: ImageItem[];
-  setImageNumber: any;
+  setImageNumber: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export default function SliderComponent({

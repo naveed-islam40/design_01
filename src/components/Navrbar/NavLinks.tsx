@@ -10,7 +10,9 @@ const NavLink = ({
   href: string;
   children: string;
   dropdownIcon?: React.ReactNode;
-  setDropdownOpen?: any;
+  setDropdownOpen?: React.Dispatch<
+    React.SetStateAction<Record<string, boolean>>
+  >;
   isDropDownOpen?: boolean;
 }) => {
   return (

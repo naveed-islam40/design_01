@@ -10,12 +10,12 @@ import {
 import Link from "next/link";
 
 const NavigationMenuOption = ({
-  children,
+  child,
   links,
   handleSelectOption,
   selectedOption,
 }: {
-  children: React.ReactNode;
+  child: React.ReactNode;
   links: { name: string; href: string }[];
   handleSelectOption?: (option: string) => void;
   selectedOption?: string;
@@ -25,7 +25,7 @@ const NavigationMenuOption = ({
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-[16px]">
-            {children}
+            {child}
           </NavigationMenuTrigger>
           <NavigationMenuContent className=" bg-white shadow-md px-2 rounded-lg">
             <ul className="w-[100px] md:w-[130px] lg:w-[150px] ">
@@ -38,7 +38,9 @@ const NavigationMenuOption = ({
                         selectedOption === link.name ? "bg-gray-200" : ""
                       }`}
                       onClick={() => {
-                        handleSelectOption && handleSelectOption(link.name);
+                        if (handleSelectOption) {
+                          handleSelectOption(link.name);
+                        }
                       }}
                     >
                       {link.name}

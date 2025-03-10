@@ -1,6 +1,12 @@
 import React from "react";
+import { IconType } from "react-icons/lib";
 
-const AboutCards = ({ cards }: { cards: any }) => {
+interface CardItem {
+  title: string;
+  subtitle: string;
+  icon: IconType;
+}
+const AboutCards = ({ cards }: { cards: CardItem }) => {
   return (
     <div className="flex group flex-col items-center gap-4 p-6">
       <cards.icon className="h-[130px] w-[130px] border rounded-full p-10 text-blue-600 group-hover:bg-blue-700 group-hover:text-white transition ease-in-out duration-500" />

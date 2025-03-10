@@ -41,7 +41,7 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-4">
             <NavigationMenuOption
               links={Homeoptions}
-              children="Home"
+              child="Home"
               handleSelectOption={(option) => setSelectOption(option)}
               selectedOption={selectOption}
             />
@@ -49,13 +49,13 @@ const Navbar = () => {
             <NavLink href="/services">Services</NavLink>
             <NavigationMenuOption
               links={[{ name: "Pages", href: "/pages" }]}
-              children="Pages"
+              child="Pages"
               handleSelectOption={(option) => setSelectOption(option)}
               selectedOption={selectOption}
             />
             <NavigationMenuOption
               links={[{ name: "Blogs", href: "/blogs" }]}
-              children="Blogs"
+              child="Blogs"
               handleSelectOption={(option) => setSelectOption(option)}
               selectedOption={selectOption}
             />
