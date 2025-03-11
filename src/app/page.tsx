@@ -15,6 +15,8 @@ import Services2 from "@/components/Pages/service2/Services2";
 import PriceTab from "@/components/Pages/price-cards/PriceTab";
 import NewsTab from "@/components/Pages/News/NewsTab";
 import PartnersTab from "@/components/Pages/partners/PartnersTab";
+import Booking from "@/components/Pages/booking/Booking";
+import Register from "@/components/Pages/Register";
 
 const page = () => {
   const [imageNumber, setImageNumber] = useState(0);
@@ -100,6 +102,10 @@ const page = () => {
       <NewsTab />
       {/* Partner Tab  */}
       <PartnersTab />
+      {/* Booking  */}
+      <Booking />
+      {/* Register  */}
+      <Register />
     </div>
   );
 };
